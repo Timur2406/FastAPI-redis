@@ -12,6 +12,8 @@ services:
       context: .
     container_name: fastapi_app
     command: ["docker/backend.sh"]
+    env_file:
+      - .env
     ports:
       - 5000:5000
     depends_on:

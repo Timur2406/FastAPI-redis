@@ -2,9 +2,9 @@ from fastapi import APIRouter, Body, Query, status
 from fastapi_cache.decorator import cache
 from typing import Annotated, Any
 
-from src.redis.manager import redis
+from redis_db.manager import redis
 from .schemas import PhoneData, FullData
-from src.core import BaseResponse, BaseHTTPException
+from core import BaseResponse, BaseHTTPException
 
 
 router: APIRouter = APIRouter(

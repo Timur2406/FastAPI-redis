@@ -3,9 +3,9 @@ from fastapi import FastAPI
 
 from fastapi_cache import FastAPICache
 
-from src.redis.manager import backend
-from src.routers import number_router
-from src.core import BaseHTTPException, base_exception_handler
+from redis_db.manager import backend
+from routers import number_router
+from core import BaseHTTPException, base_exception_handler
 
 
 async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
